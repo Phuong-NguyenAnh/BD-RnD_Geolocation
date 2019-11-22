@@ -19,27 +19,30 @@ class Demo extends React.Component {
             </div>
         ) : coords ? (
             <div className='demoGeolocated'>
-                <table>
+                <table className="w3-table w3-striped w3-bordered">
                     <tbody>
                         <tr>
-                            <td className='locName'>current latitude:</td>
-                            <td className='locName'>{coords.latitude}</td>
+                            <td>current latitude:</td>
+                            <td >{coords.latitude}</td>
                         </tr>
                         <tr>
-                            <td className='locName'>current longitude:</td>
-                            <td className='locName'>{coords.longitude}</td>
+                            <td >current longitude:</td>
+                            <td >{coords.longitude}</td>
                         </tr>
                     </tbody>
                 </table>
-                <table>
-                    <tbody>
+                <div style={{height:'100px'}}></div>
+                <table className="w3-table w3-striped w3-bordered">
+                    <thead>
                         <tr>
                             <td className='locCheck'></td>
-                            <td className='locName'>Location</td>
-                            <td className='locName'>Distance</td>
-                            <td className='locName'>latitude</td>
-                            <td className='locName'>longitude</td>
+                            <td>Location</td>
+                            <td >Distance</td>
+                            <td >latitude</td>
+                            <td >longitude</td>
                         </tr>
+                    </thead>
+                    <tbody>
                         {
                             DUBAI_LOCATIONS.map((location) => {
                                 return <LocationDistance coords={coords} location={location} />
