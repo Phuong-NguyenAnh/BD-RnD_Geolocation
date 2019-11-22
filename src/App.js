@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import DemoGeolocated from './DemoGeolocated';
+import DemoGeolocated from './demo_geolocated/DemoGeolocated';
 
 function App() {
   return (
