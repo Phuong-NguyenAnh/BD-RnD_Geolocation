@@ -6,6 +6,10 @@ import {SAI_LOCATIONS} from "../commons/Defines";
 class Demo extends React.Component {
     render() {
         const {coords} = this.props;
+        let dis1 = coords && Utils.distance(coords.longitude, coords.latitude, SAI_LOCATIONS[0].long, SAI_LOCATIONS[0].lat)
+        dis1 = dis1 > 1.0 ? `${~~dis1} km` : `${~~(dis1 * 1000)} m`
+        let dis2 = coords && Utils.distance(coords.longitude, coords.latitude, SAI_LOCATIONS[1].long, SAI_LOCATIONS[1].lat)
+        dis2 = dis2 > 1.0 ? `${~~dis2} km` : `${~~(dis2 * 1000)} m`
 
         return !this.props.isGeolocationAvailable ? (
             <div>Your browser does not support Geolocation</div>
@@ -36,11 +40,11 @@ class Demo extends React.Component {
                     </tr> */}
                     <tr>
                         <td>distance to coffee bar:</td>
-                        <td>{Utils.distance(coords.longitude, coords.latitude, SAI_LOCATIONS[0].long, SAI_LOCATIONS[0].lat)}</td>
+                        <td>{dis1}</td>
                     </tr>
                     <tr>
                         <td>distance to elevator:</td>
-                        <td>{Utils.distance(coords.longitude, coords.latitude, SAI_LOCATIONS[1].long, SAI_LOCATIONS[1].lat)}</td>
+                        <td>{dis2}</td>
                     </tr>
                 </tbody>
             </table>
