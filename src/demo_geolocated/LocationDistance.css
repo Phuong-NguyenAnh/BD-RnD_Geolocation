@@ -6,3 +6,16 @@
 .locCheck {
     width: 20px;
 }
+
+.tdContent {
+    text-align: left;
+    padding-right: 20px;
+}
+
+.demoGeolocated {
+    display: flex;
+    flex-direction: column;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    justify-content: space-around;
+}
