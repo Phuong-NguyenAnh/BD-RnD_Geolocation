@@ -13,6 +13,30 @@ const SAI_LOCATIONS = [
     }
 ];
 
+const DUBAI_LOCATIONS = [
+    {
+        name: 'Mall of Emirates',
+        lat: 25.1157036,
+        long: 55.2001866,
+    },
+    {
+        name: 'Deira city center - 6th Street',
+        lat: 25.2680143,
+        long: 55.3265629,
+    },
+    {
+        name: 'Deira city center - 8th Street',
+        lat: 25.2511071,
+        long: 55.3323843,
+    },
+    {
+        name: 'Mirdif City center',
+        lat: 25.2163238,
+        long: 55.4056062,
+    }
+]
+
 export {
-    SAI_LOCATIONS
+    SAI_LOCATIONS,
+    DUBAI_LOCATIONS
 }
